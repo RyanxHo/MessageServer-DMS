@@ -69,10 +69,10 @@ public class ListenerThread implements Runnable{
         if(requestParts[0].equals(MesssageType.JOIN)){
             userList.put(requestParts[1], requestParts[2]);
             return requestParts[1] + " added";
-        } else if(requestParts[0].equals(MesssageType.MESSAGE)) {
-            return "From " + requestParts[1] + ": " + requestParts[2];
+        } else if(requestParts[0].equals(MesssageType.BROADCAST)) {
+            return "From " + requestParts[1] + ": [to all]" + requestParts[2];
         } else {
-            return "Uknown Message Type";
+            return "Unknown Message Type";
         }
     }
     
